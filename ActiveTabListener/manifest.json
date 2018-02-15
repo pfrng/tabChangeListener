@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Active Tab Listener",
+	"version": "1.0.2",
+	"description": "Active Tab Listenerr",
+	"browser_action": {
+		"default_icon": {
+			"24": "images/icon.png"
+		},
+		"default_title": "Active Tab Listener"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["js/mainCs.js"],
+		"css": ["style/mainStyle.css"]
+	}],
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"permissions": ["activeTab",
+	"tabs"]
+}
